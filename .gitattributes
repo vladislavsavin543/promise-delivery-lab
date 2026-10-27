@@ -1,0 +1,5 @@
+reports/dashboard.html linguist-generated=true
+reports/figures/** linguist-generated=true
+reports/tables/*.csv linguist-generated=true
+reports/*.json linguist-generated=true
+reports/REPORT_RU.md linguist-generated=true

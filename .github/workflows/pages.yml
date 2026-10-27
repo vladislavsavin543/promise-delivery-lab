@@ -1,0 +1,38 @@
+name: Публикация дашборда
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Публикация демо
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Получить код
+        uses: actions/checkout@v7.0.1
+      - name: Настроить GitHub Pages
+        uses: actions/configure-pages@v6.0.0
+      - name: Собрать автономный дашборд
+        run: python scripts/build_site.py
+      - name: Подготовить файлы сайта
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: _site
+      - name: Опубликовать
+        id: deployment
+        uses: actions/deploy-pages@v5.0.1

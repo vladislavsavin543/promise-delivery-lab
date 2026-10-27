@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+data/raw/
+data/processed/
+_site/
+*.zip
+.env
+.env.*

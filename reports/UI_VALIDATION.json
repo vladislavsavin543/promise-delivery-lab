@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "checks": [
+    "исходные метрики",
+    "27 штатов",
+    "фильтры SP и 2018",
+    "бюджет 50%",
+    "область тестовой модели неизменна",
+    "ширина 390px",
+    "нет ошибок JavaScript"
+  ],
+  "browser": "C:/Program Files/Google/Chrome/Application/chrome.exe"
+}

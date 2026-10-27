@@ -1,0 +1,26 @@
+{
+  "seed": 42,
+  "primary_metric": "average_precision",
+  "priority_fraction": 0.2,
+  "target": "Опоздание по календарной дате среди доставленных заказов с валидными датами",
+  "candidates": [
+    "logistic",
+    "boost"
+  ],
+  "train_purchase_start": "2017-01-01",
+  "train_purchase_end": "2017-11-01",
+  "train_labels_before": "2018-01-01",
+  "validation_purchase_start": "2018-01-01",
+  "validation_purchase_end": "2018-03-01",
+  "validation_labels_before": "2018-05-01",
+  "final_fit_purchase_end": "2018-03-01",
+  "final_fit_labels_before": "2018-05-01",
+  "test_purchase_start": "2018-05-01",
+  "test_purchase_end": "2018-07-01",
+  "test_labels_before": "2018-10-18",
+  "rule": "Приоритет заказам с более коротким обещанным сроком",
+  "predictor_assumptions": [
+    "Обещанная дата соответствует показанной при оформлении",
+    "Состав корзины, назначенные продавцы, цена доставки и каталог известны при оформлении"
+  ]
+}
